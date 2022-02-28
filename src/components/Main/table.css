@@ -1,0 +1,8 @@
+table{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+tbody,tr,th,td{
+    border: 1px solid #000;
+}

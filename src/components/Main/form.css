@@ -1,0 +1,57 @@
+.ui_main{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    padding: 20px;
+    margin: auto;
+    font-weight: bold;
+    border: 3px solid;
+    border-radius: 13px 7px 13px 13px;
+}
+
+
+.ui_input{
+   width: 280px;
+   border: 2px solid;
+   border-radius: 12px;
+   margin-bottom: 10px;
+}
+
+.caixa_input{
+    text-align: center;
+    border: 2px solid;
+    border-radius: 10px 10px 10px 10px;
+    color: bisque;
+    background-color: #000;
+}
+
+input:focus{
+   outline: 0;
+}
+input::-webkit-input-placeholder{
+    color: bisque;
+}
+p{
+    margin: 10px 7px 10px;
+}
+
+label{
+    margin-left: 7px;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 100px;
+    background-color: #000;
+    font-weight: bold;
+    color: bisque;
+}
+
+.false{
+    display: none;
+}
+
