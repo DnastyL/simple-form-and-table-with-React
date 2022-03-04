@@ -6,7 +6,7 @@
     margin: auto;
     font-weight: bold;
     border: 3px solid;
-    border-radius: 13px 7px 13px 13px;
+    border-radius: 13px;
 }
 
 
@@ -20,7 +20,7 @@
 .caixa_input{
     text-align: center;
     border: 2px solid;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     color: bisque;
     background-color: #000;
 }
@@ -32,7 +32,7 @@ input::-webkit-input-placeholder{
     color: bisque;
 }
 p{
-    margin: 10px 7px 10px;
+    margin: 10px 7px;
 }
 
 label{
@@ -40,15 +40,20 @@ label{
 }
 
 button{
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    display: block;
+    margin: 0 auto;
     border: 2px solid;
     border-radius: 10px;
     width: 100px;
     background-color: #000;
     font-weight: bold;
     color: bisque;
+    cursor: pointer;
+}
+
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .false{

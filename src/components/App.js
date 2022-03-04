@@ -1,21 +1,12 @@
-import './App.css';
-import Header from './Header/Header';
-import Formulario from './Main/Form';
-import React, {useState} from 'react';
+import "./App.css";
+import { Header } from "./Header/Header";
+import { Formulario } from "./Main/Form";
 
-
-function App() {
-  
-const [nome, setNome] = useState();
-const [email, setEmail] = useState();
-const [tabela, setTabela] = useState();
-  return (
-    <section>
-      <Header />
-      <Formulario nome={nome} setNome={setNome} 
-       email={email} setEmail={setEmail} tabela={tabela} setTabela={setTabela}/>
-    </section>
-  );
-}
+const App = () => (
+  <section>
+    <Header />
+    <Formulario />
+  </section>
+);
 
 export default App;

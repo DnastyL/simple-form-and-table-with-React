@@ -1,11 +1,15 @@
-import React from "react";
 import "./form.css";
-import Table from "./Table";
+import {Table} from "./Table";
+import {useState} from "react";
 
-const Formulario = (props) => {
+export const Formulario = () => {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [mostrarTabela, setMostrarTabela] = useState(false);
 
   const add = (e) => {
     e.preventDefault();
+    setMostrarTabela(true);
   };
 
 
@@ -21,10 +25,10 @@ const Formulario = (props) => {
               name="nome"
               placeholder="Escreva o seu nome..."
               autoComplete="off"
-              value={props.nome}
-              onChange={(e) => props.setNome(e.target.value)}
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
             />
-            <p>Nome digitado: {props.nome}</p>
+            <p>Nome digitado: {nome}</p>
           </div>
           <div className="ui_input">
             <label>Email </label>
@@ -33,22 +37,21 @@ const Formulario = (props) => {
               type="text"
               name="email"
               autoComplete="off"
-              placeholder="Escreva o seu nome..."
-              value={props.email}
-              onChange={(e) => props.setEmail(e.target.value)}
+              placeholder="Escreva o seu email..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <p>Email digitado: {props.email}</p>
+            <p>Email digitado: {email}</p>
           </div>
-          <button id="button" onClick={()=>props.setTabela(<Table 
-            name={props.nome} email={props.email}/>)}>
+          <button id="button" disabled={!nome || !email}>
             Enviar
           </button>
         </form>
       </div>
-      {props.tabela}
+      {mostrarTabela && <Table nome={nome} email={email}/>}
       
     </section>
   );
 };
 
-export default Formulario;
+
